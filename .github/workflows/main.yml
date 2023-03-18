@@ -57,7 +57,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
-        run: echo ${{ secrets.SSH_KEY }}
       - name: executing remote ssh command to deploy
         uses: appleboy/ssh-action@master
         with:
